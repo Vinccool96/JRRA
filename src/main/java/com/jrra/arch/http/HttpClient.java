@@ -1,5 +1,6 @@
 package com.jrra.arch.http;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -25,7 +26,7 @@ public interface HttpClient {
     String SCOPE = "scope";
 
     @GET(API + V1 + AUTHORIZE)
-    public Call<Object> login(@Query(CLIENT_ID) String clientId, @Query(RESPONSE_TYPE) String responseType,
+    public Call<ResponseBody> login(@Query(CLIENT_ID) String clientId, @Query(RESPONSE_TYPE) String responseType,
             @Query(STATE) String state, @Query(REDIRECT_URI) String redirectUri, @Query(DURATION) String duration,
             @Query(SCOPE) String scope);
 
