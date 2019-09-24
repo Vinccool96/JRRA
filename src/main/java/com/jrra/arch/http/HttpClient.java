@@ -1,5 +1,6 @@
 package com.jrra.arch.http;
 
+import com.jrra.data.Base;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -29,5 +30,8 @@ public interface HttpClient {
     public Call<ResponseBody> login(@Query(CLIENT_ID) String clientId, @Query(RESPONSE_TYPE) String responseType,
             @Query(STATE) String state, @Query(REDIRECT_URI) String redirectUri, @Query(DURATION) String duration,
             @Query(SCOPE) String scope);
+
+    @GET("test/")
+    public Call<Base> test();
 
 }
