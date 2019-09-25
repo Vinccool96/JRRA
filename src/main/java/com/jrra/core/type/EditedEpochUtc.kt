@@ -7,7 +7,7 @@ import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
 import java.util.*
 
-class EditedEpochUtx : TypeAdapter<Date>() {
+class EditedEpochUtc : TypeAdapter<Date>() {
     override fun write(writer: JsonWriter?, date: Date?) {
         if (date != null) {
             val time = date.time / 1000

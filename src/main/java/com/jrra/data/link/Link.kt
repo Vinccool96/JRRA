@@ -2,7 +2,7 @@ package com.jrra.data.link
 
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
-import com.jrra.core.type.EditedEpochUtx
+import com.jrra.core.type.EditedEpochUtc
 import com.jrra.data.thing.Thing
 import java.util.*
 
@@ -21,7 +21,7 @@ class Link(created: Date?, createdUtc: Date?, ups: Int, downs: Int, likes: Boole
         @SerializedName(SELFTEXT_HTML) val selftextHtml: String, @SerializedName(SUBREDDIT) val subreddit: String,
         @SerializedName(SUBREDDIT_ID) val subredditId: String, @SerializedName(THUMBNAIL) val thumbnail: String,
         @SerializedName(TITLE) val title: String, @SerializedName(URL) val url: String,
-        @SerializedName(EDITED) @JsonAdapter(EditedEpochUtx::class) val edited: Date?,
+        @SerializedName(EDITED) @JsonAdapter(EditedEpochUtc::class) val edited: Date?,
         @SerializedName(DISTINGUISHED) val distinguished: String?, @SerializedName(STICKIED) val stickied: Boolean) :
         Thing.Votable(created, createdUtc, ups, downs, likes) {
 
