@@ -41,7 +41,7 @@ class Reddit(redditLogin: RedditLogin) : Callback<Base> {
 
     override fun onFailure(call: Call<Base>, t: Throwable) {
         println(call)
-        println(t)
+        throw t
     }
 
     override fun onResponse(call: Call<Base>, response: Response<Base>) {
@@ -52,7 +52,7 @@ class Reddit(redditLogin: RedditLogin) : Callback<Base> {
     }
 
     companion object {
-        // private const val REDDIT_API = "http://127.0.0.1:8000"
-        private const val REDDIT_API = "https://www.reddit.com"
+        private const val REDDIT_API = "http://127.0.0.1:8000"
+        //private const val REDDIT_API = "https://www.reddit.com"
     }
 }

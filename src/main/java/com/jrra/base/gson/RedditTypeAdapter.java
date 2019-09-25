@@ -76,8 +76,8 @@ import com.google.gson.stream.JsonWriter;
  * Both the type field name ({@code "type"}) and the type labels ({@code "Rectangle"}) are configurable.
  *
  * <h3>Registering Types</h3>
- * Create a {@code RedditTypeAdapter} by passing the base type and type field name to the {@link #of} factory
- * method. If you don't supply an explicit type
+ * Create a {@code RedditTypeAdapter} by passing the base type and type field name to the {@link #of} factory method. If
+ * you don't supply an explicit type
  * field name, {@code "type"} will be used. <pre>   {@code
  *   RedditTypeAdapter<Shape> shapeAdapterFactory
  *       = RedditTypeAdapter.of(Shape.class, "type");
