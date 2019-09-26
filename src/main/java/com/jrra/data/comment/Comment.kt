@@ -2,7 +2,8 @@ package com.jrra.data.comment
 
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
-import com.jrra.core.type.EditedEpochUtc
+import com.jrra.core.type.date.EditedEpochUtc
+import com.jrra.core.type.reddit.RepliesAdapter
 import com.jrra.data.Base
 import com.jrra.data.thing.Thing
 import java.util.*
@@ -17,7 +18,8 @@ class Comment(created: Date?, createdUtc: Date?, ups: Int, downs: Int, likes: Bo
         @SerializedName(GILDED) val gilded: Int, @SerializedName(LINK_AUTHOR) val linkAuthor: String,
         @SerializedName(LINK_ID) val linkId: String, @SerializedName(LINK_TITLE) val linkTitle: String,
         @SerializedName(LINK_URL) val linkUrl: String, @SerializedName(NUM_REPORTS) val numReports: Int?,
-        @SerializedName(PARENT_ID) val parentId: String, @SerializedName(REPLIES) val replies: List<Base>,
+        @SerializedName(PARENT_ID) val parentId: String,
+        @SerializedName(REPLIES) @JsonAdapter(RepliesAdapter::class) val replies: Base,
         @SerializedName(SAVED) val saved: Boolean, @SerializedName(SCORE) val score: Int,
         @SerializedName(SCORE_HIDDEN) val scoreHidden: Boolean, @SerializedName(SUBREDDIT) val subreddit: String,
         @SerializedName(SUBREDDIT_ID) val subredditId: String,

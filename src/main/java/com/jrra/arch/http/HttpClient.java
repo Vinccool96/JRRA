@@ -6,6 +6,8 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+import java.util.List;
+
 public interface HttpClient {
 
     String API = "/api";
@@ -32,6 +34,6 @@ public interface HttpClient {
             @Query(SCOPE) String scope);
 
     @GET("test/")
-    public Call<Base> test();
+    public Call<List<Base>> test();
 
 }

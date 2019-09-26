@@ -1,4 +1,4 @@
-package com.jrra.core.type
+package com.jrra.core.type.date
 
 enum class DatePattern(val value: String) {
     COMMON("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"),

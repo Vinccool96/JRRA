@@ -1,4 +1,4 @@
-package com.jrra.core.type
+package com.jrra.core.type.date
 
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader

@@ -2,8 +2,8 @@ package com.jrra.data.thing
 
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
-import com.jrra.core.type.DateEpoch
-import com.jrra.core.type.DateEpochUtc
+import com.jrra.core.type.date.DateEpoch
+import com.jrra.core.type.date.DateEpochUtc
 import com.jrra.data.RedditObject
 import java.util.*
 

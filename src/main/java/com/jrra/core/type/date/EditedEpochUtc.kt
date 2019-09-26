@@ -1,4 +1,4 @@
-package com.jrra.core.type
+package com.jrra.core.type.date
 
 import com.google.gson.JsonSyntaxException
 import com.google.gson.TypeAdapter

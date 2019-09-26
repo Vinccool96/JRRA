@@ -2,7 +2,7 @@ package com.jrra.data.link
 
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
-import com.jrra.core.type.EditedEpochUtc
+import com.jrra.core.type.date.EditedEpochUtc
 import com.jrra.data.thing.Thing
 import java.util.*
 
